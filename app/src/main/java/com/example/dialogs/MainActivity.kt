@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dialogs.databinding.ActivityMainBinding
+import com.example.dialogs.dialogs.CredentialsDialog
 import com.example.dialogs.helpers.DialogHelper
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,19 @@ class MainActivity : AppCompatActivity() {
 							Toast.LENGTH_SHORT
 						).show()
 					}).show()
+			}
+			btnShowCredentialsDialog.setOnClickListener {
+				CredentialsDialog.newInstance(
+					listener = { name, surname ->
+						Toast.makeText(
+							this@MainActivity,
+							"Name = $name. Surname = $surname",
+							Toast.LENGTH_SHORT
+						).show()
+					},
+					defaultName = "Sam",
+					defaultSurname = "Naduiev"
+				).show(supportFragmentManager, CredentialsDialog.TAG)
 			}
 		}
 	}

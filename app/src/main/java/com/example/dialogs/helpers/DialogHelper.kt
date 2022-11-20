@@ -10,6 +10,10 @@ import com.example.dialogs.R
  */
 object DialogHelper {
 
+	fun getAlertDialogBuilder(context: Context):AlertDialog.Builder {
+		return AlertDialog.Builder(context).setCancelable(false)
+	}
+
 	fun getSimpleOkDialog(context: Context): AlertDialog.Builder {
 		return getSimpleDialog(context).setPositiveButton(R.string.btn_ok, null)
 	}

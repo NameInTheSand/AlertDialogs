@@ -4,4 +4,5 @@
 	<string name="msg_simple_test">Test dialog was created</string>
 	<string name="btn_ok">OK</string>
 	<string name="btn_cancel">Cancel</string>
+	<string name="t_enter_the_credentials">Enter the credentials</string>
 </resources>
